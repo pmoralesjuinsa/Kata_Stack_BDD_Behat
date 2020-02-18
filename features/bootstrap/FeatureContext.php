@@ -82,7 +82,7 @@ class FeatureContext implements Context
      */
     public function pointerMustShow($item)
     {
-        throw new PendingException();
+        Test::assertEquals($item, $this->stackClass->stack[$this->stackClass->pointer]);
     }
 
 
