@@ -29,12 +29,13 @@ class FeatureContext implements Context
     }
 
     /**
-     * @Given The stack
+     * @Given The stack with capacity of :arg1 items
      */
-    public function theStack()
+    public function theStackWithCapacityOfItems($maxItems)
     {
-        $this->stackClass = new StackKata();
+        $this->stackClass = new StackKata($maxItems);
     }
+
 
     /**
      * @When I count the items

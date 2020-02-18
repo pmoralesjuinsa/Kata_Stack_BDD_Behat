@@ -5,11 +5,12 @@ namespace Src;
 class StackKata
 {
     public $stack;
-    protected $maxItems = 3;
+    protected $maxItems;
 
-    function __construct()
+    function __construct($maxItems = 3)
     {
         $this->stack = [];
+        $this->maxItems = $maxItems;
     }
 
     function put($item)

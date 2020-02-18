@@ -2,7 +2,7 @@ Feature: Stack Kata
   lo que dice la descripción
 
   Background:
-    Given The stack
+    Given The stack with capacity of "3" items
 
   Scenario: Check empty array
     When I count the items
