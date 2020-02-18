@@ -4,13 +4,16 @@ use Behat\Behat\Context\Context;
 use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
 
+use PHPUnit\Framework\TestCase;
+use Src\StackKata;
+
 /**
  * Defines application features from the specific context.
  */
 class FeatureContext implements Context
 {
 
-    protected $stack;
+    protected $stackClass;
 
     /**
      * Initializes context.
@@ -29,8 +32,17 @@ class FeatureContext implements Context
      */
     public function theStack()
     {
-        $this->stack = [];
+        $this->stackClass = new StackKata();
     }
+
+    /**
+     * @When I count the items
+     */
+    public function iCountTheItems()
+    {
+        count($this->stackClass->stack);
+    }
+
 
 
 }
