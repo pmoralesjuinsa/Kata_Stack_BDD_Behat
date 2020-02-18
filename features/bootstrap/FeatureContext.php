@@ -52,5 +52,12 @@ class FeatureContext implements Context
         TestCase::assertSame(0, $this->counterItems);
     }
 
+    /**
+     * @When I put the item :arg1
+     */
+    public function iPutTheItem($item)
+    {
+        $this->stackClass->put($item);
+    }
 
 }
