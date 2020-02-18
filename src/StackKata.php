@@ -19,4 +19,13 @@ class StackKata
         }
     }
 
+    function pop()
+    {
+        if(empty($this->stack)) {
+            throw new \Exception('Stack is empty');
+        }
+
+        array_pop($this->stack);
+    }
+
 }

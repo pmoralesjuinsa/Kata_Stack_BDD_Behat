@@ -60,4 +60,14 @@ class FeatureContext implements Context
         $this->stackClass->put($item);
     }
 
+    /**
+     * @When I pop the stack
+     */
+    public function iPopTheStack()
+    {
+        $this->stackClass->pop();
+    }
+
+
+
 }
