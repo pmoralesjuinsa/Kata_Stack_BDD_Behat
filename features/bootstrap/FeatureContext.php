@@ -14,6 +14,7 @@ class FeatureContext implements Context
 {
 
     protected $stackClass;
+    protected $counterItems;
 
     /**
      * Initializes context.
@@ -40,7 +41,7 @@ class FeatureContext implements Context
      */
     public function iCountTheItems()
     {
-        count($this->stackClass->stack);
+        $this->counterItems = count($this->stackClass->stack);
     }
 
     /**
@@ -48,9 +49,7 @@ class FeatureContext implements Context
      */
     public function itShouldBe($arg1)
     {
-        $counterItems = count($this->stackClass->stack);
-
-        TestCase::assertSame(0, $counterItems);
+        TestCase::assertSame(0, $this->counterItems);
     }
 
 
