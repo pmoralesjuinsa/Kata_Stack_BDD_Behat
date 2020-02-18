@@ -48,7 +48,9 @@ class FeatureContext implements Context
      */
     public function itShouldBe($arg1)
     {
-        throw new PendingException();
+        $counterItems = count($this->stackClass->stack);
+
+        TestCase::assertSame(0, $counterItems);
     }
 
 
