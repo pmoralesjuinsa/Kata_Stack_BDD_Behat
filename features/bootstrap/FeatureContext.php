@@ -57,7 +57,11 @@ class FeatureContext implements Context
      */
     public function iPutTheItem($item)
     {
-        $this->stackClass->put($item);
+        try {
+            $this->stackClass->put($item);
+        } catch(\Exception $exception) {
+            TestCase::assertEquals($exception->getMessage(), 'Stack is full');
+        }
     }
 
     /**
