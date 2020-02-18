@@ -77,6 +77,13 @@ class FeatureContext implements Context
         }
     }
 
+    /**
+     * @Then Pointer must show :arg1
+     */
+    public function pointerMustShow($item)
+    {
+        throw new PendingException();
+    }
 
 
 }

@@ -12,6 +12,7 @@ Feature: Stack Kata
     When I put the item "hola"
     Then I count the items
     Then It should be "1"
+    And Pointer must show "hola"
 
   Scenario: Get 1 when put 2 items and delete 1
     When I put the item "bye"

@@ -6,6 +6,7 @@ class StackKata
 {
     public $stack;
     protected $maxItems;
+    public $pointer;
 
     function __construct($maxItems = 3)
     {
@@ -20,6 +21,7 @@ class StackKata
         }
 
         array_push($this->stack, $item);
+        $this->pointer = count($this->stack) - 1;
 
     }
 
