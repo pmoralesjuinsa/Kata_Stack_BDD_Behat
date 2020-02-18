@@ -14,6 +14,10 @@ class StackKata
 
     function put($item)
     {
+        if(count($this->stack) >= $this->maxItems) {
+            throw new \Exception('Stack is full');
+        }
+
         if($this->maxItems > count($this->stack)) {
             array_push($this->stack, $item);
         }
