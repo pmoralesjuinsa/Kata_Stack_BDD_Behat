@@ -9,3 +9,5 @@ Feature: Stack Kata
   Scenario: Push an item
     Given The stack
     When I put the item "hola"
+    Then I count the items
+    Then It should be "1"

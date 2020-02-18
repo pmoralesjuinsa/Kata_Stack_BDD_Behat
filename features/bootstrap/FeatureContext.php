@@ -47,9 +47,9 @@ class FeatureContext implements Context
     /**
      * @Then It should be :arg1
      */
-    public function itShouldBe($arg1)
+    public function itShouldBe($counter)
     {
-        TestCase::assertSame(0, $this->counterItems);
+        TestCase::assertEquals($counter, $this->counterItems);
     }
 
     /**
