@@ -1,0 +1,15 @@
+version: "3.4"
+
+services:
+
+  miservicio_php:
+    build:
+      context: ./ApachePhp
+    #      target: miapachephpcom
+    volumes:
+      - ./../:/var/www/html
+    ports:
+      - 80:80
+
+volumes:
+  mysql-db-data:
