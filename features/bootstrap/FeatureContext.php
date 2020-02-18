@@ -29,7 +29,7 @@ class FeatureContext implements Context
      */
     public function theStack()
     {
-        throw new PendingException();
+        $this->stack = [];
     }
 
 
