@@ -65,7 +65,11 @@ class FeatureContext implements Context
      */
     public function iPopTheStack()
     {
-        $this->stackClass->pop();
+        try {
+            $this->stackClass->pop();
+        } catch(\Exception $exception) {
+            TestCase::assertEquals($exception->getMessage(), 'Stack is empty');
+        }
     }
 
 

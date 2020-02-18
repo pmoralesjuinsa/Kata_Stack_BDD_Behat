@@ -21,4 +21,5 @@ Feature: Stack Kata
     And It should be "1"
 
   Scenario: Delete 1 item with empty stack
+    When I count the items
     Then I pop the stack
