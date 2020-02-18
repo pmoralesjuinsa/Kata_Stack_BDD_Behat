@@ -18,9 +18,8 @@ class StackKata
             throw new \Exception('Stack is full');
         }
 
-        if($this->maxItems > count($this->stack)) {
-            array_push($this->stack, $item);
-        }
+        array_push($this->stack, $item);
+
     }
 
     function pop()
