@@ -23,3 +23,9 @@ Feature: Stack Kata
   Scenario: Delete 1 item with empty stack
     When I count the items
     Then I pop the stack
+    
+  Scenario: Push 4 items when max is 3
+    Then I put the item "hola"
+    And I put the item "bye"
+    And I put the item "mec"
+    And I put the item "boom"
