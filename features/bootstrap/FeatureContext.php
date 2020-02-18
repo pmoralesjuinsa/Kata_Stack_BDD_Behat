@@ -43,6 +43,13 @@ class FeatureContext implements Context
         count($this->stackClass->stack);
     }
 
+    /**
+     * @Then It should be :arg1
+     */
+    public function itShouldBe($arg1)
+    {
+        throw new PendingException();
+    }
 
 
 }
