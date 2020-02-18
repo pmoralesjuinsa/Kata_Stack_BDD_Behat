@@ -14,7 +14,7 @@ class StackKata
 
     function put($item)
     {
-        if($this->maxItems < count($this->stack)) {
+        if($this->maxItems > count($this->stack)) {
             array_push($this->stack, $item);
         }
     }
