@@ -17,3 +17,5 @@ Feature: Stack Kata
     When I put the item "bye"
     And I put the item "mec"
     And I pop the stack
+    Then I count the items
+    And It should be "1"
